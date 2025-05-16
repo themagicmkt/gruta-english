@@ -22,11 +22,11 @@ const LoadingPage = () => {
           <Loader className="h-16 w-16 text-[#5f9ea0] animate-spin" />
           
           <h1 className="text-2xl md:text-3xl font-playfair font-semibold text-[#333333]">
-            Salvando seu Pedido de Oração...
+            Saving your Prayer Request...
           </h1>
           
           <p className="text-gray-600">
-            Estamos processando seu pedido com todo o carinho e reverência.
+            We are processing your request with care and reverence.
           </p>
         </div>
       </div>

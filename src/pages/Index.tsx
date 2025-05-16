@@ -43,25 +43,25 @@ const Index = () => {
       <header className="sticky top-0 bg-white/90 backdrop-blur-sm shadow-sm z-50">
         <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg flex justify-between items-center py-4">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-              <HandHeart className="text-[#5f9ea0]" size={24} />
-            </div>
-            <h1 className="text-xl font-playfair font-semibold text-[#5f9ea0]">Voluntários de Lourdes</h1>
+        <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+          <HandHeart className="text-[#5f9ea0]" size={24} />
+        </div>
+        <h1 className="text-xl font-playfair font-semibold text-[#5f9ea0]">Lourdes Volunteers</h1>
           </div>
           
           <nav className="hidden md:flex space-x-6">
-            <a href="#como-funciona" className="text-sm text-gray-700 hover:text-[#5f9ea0] transition-colors">Como Funciona</a>
-            <a href="#por-que-lourdes" className="text-sm text-gray-700 hover:text-[#5f9ea0] transition-colors">Por Que Lourdes?</a>
-            <a href="#formulario" className="text-sm text-gray-700 hover:text-[#5f9ea0] transition-colors">Formulário de Oração</a>
+        <a href="#como-funciona" className="text-sm text-gray-700 hover:text-[#5f9ea0] transition-colors">How It Works</a>
+        <a href="#por-que-lourdes" className="text-sm text-gray-700 hover:text-[#5f9ea0] transition-colors">Why Lourdes?</a>
+        <a href="#formulario" className="text-sm text-gray-700 hover:text-[#5f9ea0] transition-colors">Prayer Form</a>
           </nav>
 
           <div className="md:hidden">
-            <Button variant="ghost" size="sm">
-              <span className="sr-only">Abrir menu</span>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
-            </Button>
+        <Button variant="ghost" size="sm">
+          <span className="sr-only">Open menu</span>
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </Button>
           </div>
         </div>
       </header>
@@ -70,266 +70,266 @@ const Index = () => {
         {/* Hero Section */}
         <section className="py-16 md:py-24 px-2 sm:px-4 bg-gradient-to-b from-white to-blue-50">
           <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg text-center max-w-4xl">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold mb-6 text-[#333333]">
-              🕊 Milagres Acontecem Todos os Dias na Gruta de Lourdes
-            </h2>
-            <p className="text-xl md:text-2xl font-playfair mb-6 text-[#5f9ea0]">
-              Envie Seu Pedido de Oração à Sagrada Gruta de Lourdes, na França
-            </p>
-            <p className="text-lg mb-8 max-w-3xl mx-auto leading-relaxed">
-              Todos os anos, mais de 6 milhões de peregrinos viajam até a Gruta de Lourdes em busca de cura, 
-              paz e intervenção divina. Agora, sua oração pode ser entregue neste local milagroso de onde você estiver. 
-              Permita-nos levar sua mensagem até esse santuário sagrado, onde incontáveis milagres já aconteceram.
-            </p>
-            <Button 
-              asChild
-              className="bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-8 py-3 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
-            >
-              <a href="#formulario">
-                ➡️ Enviar Meu Pedido de Oração
-              </a>
-            </Button>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold mb-6 text-[#333333]">
+          🕊 Miracles Happen Every Day at the Grotto of Lourdes
+        </h2>
+        <p className="text-xl md:text-2xl font-playfair mb-6 text-[#5f9ea0]">
+          Send Your Prayer Request to the Sacred Grotto of Lourdes, France
+        </p>
+        <p className="text-lg mb-8 max-w-3xl mx-auto leading-relaxed">
+          Every year, over 6 million pilgrims travel to the Grotto of Lourdes seeking healing, 
+          peace, and divine intervention. Now, your prayer can be delivered to this miraculous place from wherever you are. 
+          Allow us to take your message to this sacred sanctuary, where countless miracles have already happened.
+        </p>
+        <Button 
+          asChild
+          className="bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-8 py-3 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
+        >
+          <a href="#formulario">
+            ➡️ Send My Prayer Request
+          </a>
+        </Button>
           </div>
         </section>
 
-        {/* Entrega da Oração */}
+        {/* Prayer Delivery */}
         <section className="py-16 px-2 sm:px-4 bg-white">
           <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
-            <div className="bg-[#f4d58d]/10 border border-[#f4d58d]/30 p-8 rounded-xl shadow-sm">
-              <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-center text-[#333333]">
-                Sua Oração, Entregue na Gruta de Lourdes
-              </h3>
-              <p className="text-lg mb-6 leading-relaxed">
-                Uma vez por mês, realizamos nossa viagem à Gruta de Lourdes com os pedidos de oração. 
-                Se você preencher o formulário abaixo, levaremos sua oração pessoalmente na próxima visita. 
-                Você receberá fotos por e-mail como prova de que sua oração foi entregue neste local sagrado.
-              </p>
-              
-              <div className="my-8 rounded-xl overflow-hidden shadow-lg">
-                <img 
-                  src="/img01.jpg" 
-                  alt="Gruta de Lourdes" 
-                  className="w-full max-w-none aspect-video object-cover"
-                />
-              </div>
-              
-              <div className="flex justify-center">
-                <Button 
-                  asChild
-                  className="bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-8 py-3 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
-                >
-                  <a href="#formulario">
-                    ➡️ Enviar Meu Pedido de Oração
-                  </a>
-                </Button>
-              </div>
-            </div>
+        <div className="bg-[#f4d58d]/10 border border-[#f4d58d]/30 p-8 rounded-xl shadow-sm">
+          <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-center text-[#333333]">
+            Your Prayer, Delivered at the Grotto of Lourdes
+          </h3>
+          <p className="text-lg mb-6 leading-relaxed">
+            Once a month, we make our trip to the Grotto of Lourdes with the prayer requests. 
+            If you fill out the form below, we will personally deliver your prayer on our next visit. 
+            You will receive photos by email as proof that your prayer was delivered at this sacred place.
+          </p>
+          
+          <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+            <img 
+          src="/img01.jpg" 
+          alt="Grotto of Lourdes" 
+          className="w-full max-w-none aspect-video object-cover"
+            />
+          </div>
+          
+          <div className="flex justify-center">
+            <Button 
+          asChild
+          className="bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-8 py-3 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
+            >
+          <a href="#formulario">
+            ➡️ Send My Prayer Request
+          </a>
+            </Button>
+          </div>
+        </div>
           </div>
         </section>
 
-       {/* Formulário de Oração - Movido para a terceira seção */}
-<section id="formulario" className="py-16 px-2 sm:px-4 bg-blue-50">
-  <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-full sm:max-w-2xl">
-    <h3 className="text-3xl font-playfair font-semibold mb-10 text-center text-[#333333]">
-      Envie Sua Oração à Gruta de Lourdes
-    </h3>
-    <Card className="w-full border-[#5f9ea0]/30 shadow-lg">
+       {/* Prayer Form */}
+    <section id="formulario" className="py-16 px-2 sm:px-4 bg-blue-50">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-full sm:max-w-2xl">
+        <h3 className="text-3xl font-playfair font-semibold mb-10 text-center text-[#333333]">
+      Send Your Prayer to the Grotto of Lourdes
+        </h3>
+        <Card className="w-full border-[#5f9ea0]/30 shadow-lg">
       <CardContent className="p-8">
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           <div className="space-y-2">
-            <label htmlFor="name" className="block text-sm font-medium">Nome</label>
-            <Input
-              id="name"
-              placeholder="Digite seu nome"
-              className="w-full border-[#5f9ea0]/30"
-              {...register("name", { required: "Nome é obrigatório" })}
-            />
-            {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
+        <label htmlFor="name" className="block text-sm font-medium">Name</label>
+        <Input
+          id="name"
+          placeholder="Enter your name"
+          className="w-full border-[#5f9ea0]/30"
+          {...register("name", { required: "Name is required" })}
+        />
+        {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
           </div>
 
           <div className="space-y-2">
-            <label htmlFor="prayer" className="block text-sm font-medium">Seu Pedido de Oração</label>
-            <Textarea
-              id="prayer"
-              placeholder="Escreva sua oração aqui..."
-              className="w-full min-h-[150px] border-[#5f9ea0]/30"
-              {...register("prayer", { required: "O pedido de oração é obrigatório" })}
-            />
-            {errors.prayer && <p className="text-red-500 text-sm">{errors.prayer.message}</p>}
+        <label htmlFor="prayer" className="block text-sm font-medium">Your Prayer Request</label>
+        <Textarea
+          id="prayer"
+          placeholder="Write your prayer here..."
+          className="w-full min-h-[150px] border-[#5f9ea0]/30"
+          {...register("prayer", { required: "Prayer request is required" })}
+        />
+        {errors.prayer && <p className="text-red-500 text-sm">{errors.prayer.message}</p>}
           </div>
 
           <div className="pt-4">
-            <Button 
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white py-3 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
-            >
-              {isSubmitting ? (
-                <span className="flex items-center gap-2">
-                  <svg className="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                  </svg>
-                  Enviando sua oração...
-                </span>
-              ) : (
-                "Enviar Minha Oração"
-              )}
-            </Button>
+        <Button 
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white py-3 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
+        >
+          {isSubmitting ? (
+            <span className="flex items-center gap-2">
+          <svg className="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          Sending your prayer...
+            </span>
+          ) : (
+            "Send My Prayer"
+          )}
+        </Button>
           </div>
         </form>
       </CardContent>
-    </Card>
-  </div>
-</section>
+        </Card>
+      </div>
+    </section>
 
-        {/* Como Funciona */}
+        {/* How It Works */}
         <section id="como-funciona" className="py-16 md:py-24 px-2 sm:px-4 bg-white">
           <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-5xl">
-            <h3 className="text-3xl font-playfair font-semibold mb-12 text-center text-[#333333]">Como Funciona</h3>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-6 md:p-8 rounded-xl shadow-md flex flex-col items-center">
-                <div className="w-20 h-20 bg-[#5f9ea0]/10 rounded-full flex items-center justify-center mb-6">
-                  <BookText className="text-[#5f9ea0]" size={32} />
-                </div>
-                <h4 className="font-playfair text-xl font-semibold mb-4 text-[#333333]">Passo 1</h4>
-                <p className="text-center">Imprimimos sua oração com carinho. Sua oração será cuidadosamente impressa em uma nota especial.</p>
-              </div>
-              
-              <div className="bg-white p-6 md:p-8 rounded-xl shadow-md flex flex-col items-center">
-                <div className="w-20 h-20 bg-[#5f9ea0]/10 rounded-full flex items-center justify-center mb-6">
-                  <MapPin className="text-[#5f9ea0]" size={32} />
-                </div>
-                <h4 className="font-playfair text-xl font-semibold mb-4 text-[#333333]">Passo 2</h4>
-                <p className="text-center">Entregamos sua oração na Gruta de Lourdes. Na Gruta, a oração será colocada na Caixa de Pedidos, onde será feita uma bênção especial. Este momento sagrado será fotografado.</p>
-              </div>
-              
-              <div className="bg-white p-6 md:p-8 rounded-xl shadow-md flex flex-col items-center">
-                <div className="w-20 h-20 bg-[#5f9ea0]/10 rounded-full flex items-center justify-center mb-6">
-                  <Mail className="text-[#5f9ea0]" size={32} />
-                </div>
-                <h4 className="font-playfair text-xl font-semibold mb-4 text-[#333333]">Passo 3</h4>
-                <p className="text-center">Você recebe a confirmação. Você receberá as fotos da entrega diretamente no seu e-mail assim que chegarmos ao local na visita mensal.</p>
-              </div>
+        <h3 className="text-3xl font-playfair font-semibold mb-12 text-center text-[#333333]">How It Works</h3>
+        
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-white p-6 md:p-8 rounded-xl shadow-md flex flex-col items-center">
+            <div className="w-20 h-20 bg-[#5f9ea0]/10 rounded-full flex items-center justify-center mb-6">
+          <BookText className="text-[#5f9ea0]" size={32} />
             </div>
+            <h4 className="font-playfair text-xl font-semibold mb-4 text-[#333333]">Step 1</h4>
+            <p className="text-center">We print your prayer with care. Your prayer will be carefully printed on a special note.</p>
+          </div>
+          
+          <div className="bg-white p-6 md:p-8 rounded-xl shadow-md flex flex-col items-center">
+            <div className="w-20 h-20 bg-[#5f9ea0]/10 rounded-full flex items-center justify-center mb-6">
+          <MapPin className="text-[#5f9ea0]" size={32} />
+            </div>
+            <h4 className="font-playfair text-xl font-semibold mb-4 text-[#333333]">Step 2</h4>
+            <p className="text-center">We deliver your prayer at the Grotto of Lourdes. At the Grotto, the prayer will be placed in the Prayer Box, where a special blessing will be made. This sacred moment will be photographed.</p>
+          </div>
+          
+          <div className="bg-white p-6 md:p-8 rounded-xl shadow-md flex flex-col items-center">
+            <div className="w-20 h-20 bg-[#5f9ea0]/10 rounded-full flex items-center justify-center mb-6">
+          <Mail className="text-[#5f9ea0]" size={32} />
+            </div>
+            <h4 className="font-playfair text-xl font-semibold mb-4 text-[#333333]">Step 3</h4>
+            <p className="text-center">You receive confirmation. You will receive photos of the delivery directly to your email as soon as we arrive at the location on the monthly visit.</p>
+          </div>
+        </div>
           </div>
         </section>
 
-        {/* Os Milagres Esperam por Você */}
+        {/* Miracles Await You */}
         <section className="py-16 px-2 sm:px-4 bg-blue-50">
           <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
-            <h3 className="text-3xl font-playfair font-semibold mb-8 text-center text-[#333333]">Os Milagres Esperam por Você</h3>
-            <p className="text-lg mb-6 leading-relaxed">
-              Ao enviar sua oração à Gruta de Lourdes, você se une a milhares de pessoas que já buscaram a graça divina nesse santuário. 
-              Tenha conforto ao saber que sua prece foi colocada em um lugar tocado pela Virgem Maria, onde milagres são parte da rotina.
-            </p>
-            <p className="text-lg mb-8 leading-relaxed">
-              Seja você alguém em busca de cura, paz, amor ou clareza, entregar sua oração em Lourdes é um gesto espiritual profundo. 
-              Esse momento sagrado ficará com você para sempre, como prova de que fez algo extraordinário para honrar a Deus.
-            </p>
-            <div className="flex justify-center">
-              <Button 
-                asChild
-                className="bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-8 py-3 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
-              >
-                <a href="#formulario">
-                  ➡️ Enviar Minha Oração Agora
-                </a>
-              </Button>
-            </div>
+        <h3 className="text-3xl font-playfair font-semibold mb-8 text-center text-[#333333]">Miracles Await You</h3>
+        <p className="text-lg mb-6 leading-relaxed">
+          By sending your prayer to the Grotto of Lourdes, you join thousands of people who have already sought divine grace in this sanctuary. 
+          Take comfort in knowing your prayer was placed in a place touched by the Virgin Mary, where miracles are part of daily life.
+        </p>
+        <p className="text-lg mb-8 leading-relaxed">
+          Whether you are seeking healing, peace, love, or clarity, delivering your prayer in Lourdes is a profound spiritual gesture. 
+          This sacred moment will stay with you forever, as proof that you did something extraordinary to honor God.
+        </p>
+        <div className="flex justify-center">
+          <Button 
+            asChild
+            className="bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-8 py-3 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
+          >
+            <a href="#formulario">
+          ➡️ Send My Prayer Now
+            </a>
+          </Button>
+        </div>
           </div>
         </section>
 
-        {/* Viva as Bênçãos de Lourdes */}
+        {/* Experience the Blessings of Lourdes */}
         <section className="py-16 px-2 sm:px-4 bg-gradient-to-b from-white to-blue-50">
           <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
-            <h3 className="text-3xl font-playfair font-semibold mb-8 text-center text-[#333333]">Viva as Bênçãos de Lourdes Sem Sair de Casa</h3>
-            <p className="text-lg mb-8 text-center leading-relaxed">
-              Você não precisa viajar até Lourdes para receber as bênçãos deste lugar sagrado. 
-              Ao permitir que levemos sua oração, você economiza tempo e dinheiro, e ainda assim recebe os benefícios espirituais desse local santo.
-            </p>
-            
-            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
-              <img 
-                src="/img02.webp" 
-                alt="Paisagem serena representando bênçãos de Lourdes" 
-                className="w-full max-w-none aspect-video object-cover"
-              />
-            </div>
+        <h3 className="text-3xl font-playfair font-semibold mb-8 text-center text-[#333333]">Experience the Blessings of Lourdes Without Leaving Home</h3>
+        <p className="text-lg mb-8 text-center leading-relaxed">
+          You don't need to travel to Lourdes to receive the blessings of this sacred place. 
+          By allowing us to take your prayer, you save time and money, and still receive the spiritual benefits of this holy site.
+        </p>
+        
+        <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+          <img 
+            src="/img02.webp" 
+            alt="Serene landscape representing Lourdes blessings" 
+            className="w-full max-w-none aspect-video object-cover"
+          />
+        </div>
           </div>
         </section>
 
-        {/* Compartilhe as Bênçãos */}
+        {/* Share the Blessings */}
         <section className="py-16 px-2 sm:px-4 bg-white">
           <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
-            <div className="bg-[#5f9ea0]/5 border border-[#5f9ea0]/10 p-8 rounded-xl shadow-sm">
-              <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-center text-[#333333]">Compartilhe as Bênçãos com Quem Você Ama</h3>
-              <p className="text-lg mb-6 text-center leading-relaxed">
-                Se você não precisa de um milagre agora, envie uma oração por alguém que precisa. 
-                Ofereça esse gesto de amor a um ente querido e permita que a graça divina alcance a vida dele também.
-              </p>
-              <div className="flex justify-center">
-                <Button 
-                  asChild
-                  className="bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-8 py-3 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
-                >
-                  <a href="#formulario">
-                    ➡️ Enviar Oração por um Ente Querido
-                  </a>
-                </Button>
-              </div>
-            </div>
+        <div className="bg-[#5f9ea0]/5 border border-[#5f9ea0]/10 p-8 rounded-xl shadow-sm">
+          <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-center text-[#333333]">Share the Blessings with Those You Love</h3>
+          <p className="text-lg mb-6 text-center leading-relaxed">
+            If you don't need a miracle right now, send a prayer for someone who does. 
+            Offer this act of love to a loved one and allow divine grace to reach their life as well.
+          </p>
+          <div className="flex justify-center">
+            <Button 
+          asChild
+          className="bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-8 py-3 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
+            >
+          <a href="#formulario">
+            ➡️ Send a Prayer for a Loved One
+          </a>
+            </Button>
+          </div>
+        </div>
           </div>
         </section>
 
-        {/* Por Que a Gruta de Lourdes */}
+        {/* Why the Grotto of Lourdes */}
         <section id="por-que-lourdes" className="py-16 px-2 sm:px-4 bg-blue-50">
           <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
-            <h3 className="text-3xl font-playfair font-semibold mb-8 text-center text-[#333333]">Por Que a Gruta de Lourdes?</h3>
-            
-            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
-              <img 
-                src="/img03.webp" 
-                alt="Interior de catedral representando a Gruta de Lourdes" 
-                className="w-full max-w-none aspect-video object-cover"
-              />
+        <h3 className="text-3xl font-playfair font-semibold mb-8 text-center text-[#333333]">Why the Grotto of Lourdes?</h3>
+        
+        <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+          <img 
+            src="/img03.webp" 
+            alt="Cathedral interior representing the Grotto of Lourdes" 
+            className="w-full max-w-none aspect-video object-cover"
+          />
+        </div>
+        
+        <Card className="border-[#f4d58d]/30 shadow-lg">
+          <CardContent className="p-8">
+            <div className="flex justify-center mb-8">
+          <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center">
+            <Heart className="text-[#5f9ea0]" size={48} />
+          </div>
             </div>
-            
-            <Card className="border-[#f4d58d]/30 shadow-lg">
-              <CardContent className="p-8">
-                <div className="flex justify-center mb-8">
-                  <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center">
-                    <Heart className="text-[#5f9ea0]" size={48} />
-                  </div>
-                </div>
-                <p className="text-lg mb-0 leading-relaxed text-center">
-                  Há mais de um século, a Gruta de Lourdes tem sido destino de peregrinação, 
-                  conhecida por suas curas milagrosas e pela forte conexão espiritual. 
-                  Peregrinos relatam transformações profundas após visitarem o local. 
-                  Agora você também pode ter sua oração colocada diretamente nesse espaço sagrado.
-                </p>
-              </CardContent>
-            </Card>
+            <p className="text-lg mb-0 leading-relaxed text-center">
+          For over a century, the Grotto of Lourdes has been a pilgrimage destination, 
+          known for its miraculous healings and strong spiritual connection. 
+          Pilgrims report profound transformations after visiting the site. 
+          Now you too can have your prayer placed directly in this sacred space.
+            </p>
+          </CardContent>
+        </Card>
           </div>
         </section>
 
-        {/* CTA Principal */}
+        {/* Main CTA */}
         <section className="py-16 md:py-24 px-2 sm:px-4 bg-gradient-to-b from-white to-blue-50">
           <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg text-center max-w-4xl">
-            <h3 className="text-3xl font-playfair font-semibold mb-6 text-[#333333]">
-              Receba o Presente dos Milagres Hoje Mesmo
-            </h3>
-            <p className="text-lg mb-8 max-w-3xl mx-auto">
-              Coloque sua oração na Gruta de Lourdes e confie no poder da intervenção divina. 
-              Sua oração, entregue pessoalmente, fará parte da tradição sagrada desse lugar santo.
-            </p>
-            <a
-              href="#formulario"
-              className="inline-block px-6 py-4 bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white rounded-lg text-lg font-medium shadow-md hover:shadow-lg text-center leading-tight"
-            >
-              ➡️ Enviar Minha Oração<br />à Gruta de Lourdes
-            </a>
+        <h3 className="text-3xl font-playfair font-semibold mb-6 text-[#333333]">
+          Receive the Gift of Miracles Today
+        </h3>
+        <p className="text-lg mb-8 max-w-3xl mx-auto">
+          Place your prayer in the Grotto of Lourdes and trust in the power of divine intervention. 
+          Your prayer, delivered in person, will become part of the sacred tradition of this holy place.
+        </p>
+        <a
+          href="#formulario"
+          className="inline-block px-6 py-4 bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white rounded-lg text-lg font-medium shadow-md hover:shadow-lg text-center leading-tight"
+        >
+          ➡️ Send My Prayer<br />to the Grotto of Lourdes
+        </a>
           </div>
         </section>
       </main>
@@ -338,39 +338,39 @@ const Index = () => {
       <footer className="bg-[#333333] text-gray-300 py-12 px-2 sm:px-4">
         <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-6xl">
           <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h4 className="font-playfair text-xl mb-4 text-white">Voluntários de Lourdes</h4>
-              <p className="text-sm leading-relaxed mb-6">
-                Voluntários de Lourdes fazem parte do Ministério das Devoções. Não somos representantes 
-                oficiais do Santuário de Lourdes. Somos apenas voluntários que dedicam tempo e esforço 
-                para levar as bênçãos de Nossa Senhora de Lourdes a quem precisa.
-              </p>
-              <p className="text-sm leading-relaxed">
-                O conteúdo enviado (e-mails, ebooks e demais materiais) é apenas para fins informativos e 
-                espirituais. Para questões médicas, legais ou psicológicas, procure um profissional qualificado.
-              </p>
-            </div>
-            <div className="md:pl-8">
-              <h4 className="font-playfair text-xl mb-4 text-white">Links Importantes</h4>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="text-sm hover:text-[#f4d58d] transition-colors">Termos e Condições</a>
-                </li>
-                <li>
-                  <a href="#" className="text-sm hover:text-[#f4d58d] transition-colors">Política de Privacidade</a>
-                </li>
-                <li>
-                  <a href="#" className="text-sm hover:text-[#f4d58d] transition-colors">Fale Conosco</a>
-                </li>
-              </ul>
-              <div className="mt-8">
-                <p className="text-sm text-gray-400">&copy; 2025 Voluntários de Lourdes. Todos os direitos reservados.</p>
-              </div>
-            </div>
+        <div>
+          <h4 className="font-playfair text-xl mb-4 text-white">Lourdes Volunteers</h4>
+          <p className="text-sm leading-relaxed mb-6">
+            Lourdes Volunteers are part of the Ministry of Devotions. We are not official representatives 
+            of the Sanctuary of Lourdes. We are simply volunteers who dedicate time and effort 
+            to bring the blessings of Our Lady of Lourdes to those in need.
+          </p>
+          <p className="text-sm leading-relaxed">
+            The content sent (emails, ebooks, and other materials) is for informational and 
+            spiritual purposes only. For medical, legal, or psychological matters, please consult a qualified professional.
+          </p>
+        </div>
+        <div className="md:pl-8">
+          <h4 className="font-playfair text-xl mb-4 text-white">Important Links</h4>
+          <ul className="space-y-2">
+            <li>
+          <a href="#" className="text-sm hover:text-[#f4d58d] transition-colors">Terms and Conditions</a>
+            </li>
+            <li>
+          <a href="#" className="text-sm hover:text-[#f4d58d] transition-colors">Privacy Policy</a>
+            </li>
+            <li>
+          <a href="#" className="text-sm hover:text-[#f4d58d] transition-colors">Contact Us</a>
+            </li>
+          </ul>
+          <div className="mt-8">
+            <p className="text-sm text-gray-400">&copy; 2025 Lourdes Volunteers. All rights reserved.</p>
+          </div>
+        </div>
           </div>
         </div>
       </footer>
-    </div>
+        </div>
   );
 };
 
