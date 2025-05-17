@@ -23,16 +23,15 @@ const Index = () => {
 
   const onSubmit = async (data) => {
     setIsSubmitting(true);
-    
-    // Simular envio
+    // Simulate submission
     toast({
-      title: "Oração recebida",
-      description: "Seu pedido será levado à Gruta de Lourdes"
+      title: "Prayer received",
+      description: "Your request will be taken to the Grotto of Lourdes"
     });
     
     // Redirect to loading page instead of confirmation
     setTimeout(() => {
-      navigate("/salvando");
+      navigate("/saving");
       setIsSubmitting(false);
     }, 1500);
   };

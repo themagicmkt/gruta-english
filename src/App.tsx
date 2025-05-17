@@ -19,8 +19,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/salvando" element={<LoadingPage />} />
-          <Route path="/confirmacao" element={<Confirmation />} />
+          <Route path="/saving" element={<LoadingPage />} />
+          <Route path="/confirmation" element={<Confirmation />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
