@@ -219,7 +219,7 @@ const Confirmation = () => {
             <Gift className="text-[#5f9ea0]" size={32} />
             </div>
             
-            <h3 className="font-playfair font-semibold text-xl mb-2 text-center">R$ 9.90</h3>
+            <h3 className="font-playfair font-semibold text-xl mb-2 text-center">$ 30</h3>
             <h4 className="font-sans text-lg mb-4 text-center">I Need a Little Support</h4>
             
             <p className="text-sm mb-6 text-center italic">
@@ -227,7 +227,7 @@ const Confirmation = () => {
             </p>
             
             <Button className="w-full bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all" asChild>
-            <a href="https://seguro.voluntariosdelourdes.online/r/O1S2XW5HJE" target="_blank" rel="noopener noreferrer">
+            <a href="https://pay.hotmart.com/N99775963C?off=onbwlmt3" target="_blank" rel="noopener noreferrer">
               Include my prayer
             </a>
             </Button>
@@ -248,7 +248,7 @@ const Confirmation = () => {
             <HeartPulse className="text-[#5f9ea0]" size={32} />
             </div>
             
-            <h3 className="font-playfair font-semibold text-xl mb-2 text-center">R$ 19.90</h3>
+            <h3 className="font-playfair font-semibold text-xl mb-2 text-center">$ 35</h3>
             <h4 className="font-sans text-lg mb-4 text-center">Actual Delivery Cost</h4>
             
             <p className="text-sm mb-6 text-center italic">
@@ -256,7 +256,7 @@ const Confirmation = () => {
             </p>
             
             <Button className="w-full bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all" asChild>
-            <a href="https://seguro.voluntariosdelourdes.online/r/9XBO3KMO78" target="_blank" rel="noopener noreferrer">
+            <a href="https://pay.hotmart.com/N99775963C?off=ndjrlph8" target="_blank" rel="noopener noreferrer">
               Complete Prayer Delivery
             </a>
             </Button>
@@ -274,7 +274,7 @@ const Confirmation = () => {
             <Gift className="text-[#f4d58d]" size={32} />
             </div>
             
-            <h3 className="font-playfair font-semibold text-xl mb-2 text-center">R$ 29.90</h3>
+            <h3 className="font-playfair font-semibold text-xl mb-2 text-center">$ 55</h3>
             <h4 className="font-sans text-lg mb-4 text-center">Take My Prayer + Support Another Devotee</h4>
             
             <p className="text-sm mb-6 text-center italic">
@@ -282,7 +282,7 @@ const Confirmation = () => {
             </p>
             
             <Button className="w-full bg-[#f4d58d] hover:bg-[#e3c47c] text-[#333333] px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all" asChild>
-            <a href="https://seguro.voluntariosdelourdes.online/r/LW61SFGXDT" target="_blank" rel="noopener noreferrer">
+            <a href="https://pay.hotmart.com/N99775963C?off=onbwlmt3" target="_blank" rel="noopener noreferrer">
               Send and Help
             </a>
             </Button>
