@@ -15,7 +15,7 @@ const Confirmation = () => {
   const location = useLocation();
   const state = location.state as { nome?: string; genero?: string } | null;
 
-  const nomeCompleto = state?.nome || "irmã";
+  const nomeCompleto = state?.nome || "Sister";
   const genero = state?.genero || ""; // ✅ agora declarado corretamente
 
   const primeiroNome = nomeCompleto.split(" ")[0];
@@ -77,10 +77,10 @@ const Confirmation = () => {
       
       {/* Personal Greeting Section */}
         <section className="py-16 px-2 sm:px-4 bg-white">
-          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
-           <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-[#5f9ea0]">
-  {saudacao}
-</h3>
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
+        <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-[#5f9ea0]">
+          {saudacao} {firstName},
+        </h3>
 
             {paragraph && (
               <p className="text-lg mb-6 leading-relaxed">
