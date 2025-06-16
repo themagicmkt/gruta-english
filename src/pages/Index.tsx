@@ -42,9 +42,10 @@ const Index = () => {
     localStorage.setItem("paragraph", gptData.paragraph);
 
     toast({
-      title: "✉️ Oração recebida",
-      description: "Mantenha essa página aberta."
-    });
+  title: "✉️ Prayer received",
+  description: "Please keep this page open."
+});
+
 
     // Redireciona para /salvando com nome e gênero
     navigate("/saving", {
