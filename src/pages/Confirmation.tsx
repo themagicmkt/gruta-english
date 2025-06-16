@@ -10,7 +10,7 @@ import { useLocation } from "react-router-dom";
 
 const Confirmation = () => {
   const [headline, setHeadline] = useState("");
-  const [paragrafo, setParagrafo] = useState("");
+  const [paragraph, setparagraph] = useState("");
 
   const location = useLocation();
   const state = location.state as { nome?: string; genero?: string } | null;
@@ -20,14 +20,15 @@ const Confirmation = () => {
 
   const primeiroNome = nomeCompleto.split(" ")[0];
   const firstName = primeiroNome.charAt(0).toUpperCase() + primeiroNome.slice(1).toLowerCase();
-  const saudacao = `Olá, ${firstName}`;
+  const saudacao = `Dear ${firstName},`;
+
   const prontx = genero === "feminino" ? "pronta" : "pronto";
 
   useEffect(() => {
     const h = localStorage.getItem("headline");
-    const p = localStorage.getItem("paragrafo");
+    const p = localStorage.getItem("paragraph");
     if (h) setHeadline(h);
-    if (p) setParagrafo(p);
+    if (p) setparagraph(p);
   }, []);
 
   return (
@@ -81,9 +82,9 @@ const Confirmation = () => {
   {saudacao}
 </h3>
 
-            {paragrafo && (
+            {paragraph && (
               <p className="text-lg mb-6 leading-relaxed">
-                {paragrafo}
+                {paragraph}
               </p>
             )}
         

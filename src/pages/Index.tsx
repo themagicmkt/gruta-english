@@ -39,7 +39,7 @@ const Index = () => {
 
     const gptData = await gptRes.json();
     localStorage.setItem("headline", gptData.headline);
-    localStorage.setItem("paragrafo", gptData.paragrafo);
+    localStorage.setItem("paragraph", gptData.paragraph);
 
     toast({
       title: "✉️ Oração recebida",
