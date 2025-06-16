@@ -36,7 +36,6 @@ const Index = () => {
         prayer: data.prayer
       })
     });
-    fasdfasdfasdf
 
     const gptData = await gptRes.json();
     localStorage.setItem("headline", gptData.headline);
