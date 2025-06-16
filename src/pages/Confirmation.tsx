@@ -79,7 +79,7 @@ const Confirmation = () => {
         <section className="py-16 px-2 sm:px-4 bg-white">
           <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
            <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-[#5f9ea0]">
-  {saudacao} {firstName}
+  {saudacao}
 </h3>
 
             {paragraph && (
