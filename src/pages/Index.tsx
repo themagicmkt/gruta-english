@@ -47,7 +47,7 @@ const Index = () => {
     });
 
     // Redireciona para /salvando com nome e gênero
-    navigate("/salvando", {
+    navigate("/saving", {
       state: {
         nome: data.name,
       }
