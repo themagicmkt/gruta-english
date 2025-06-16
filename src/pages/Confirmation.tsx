@@ -1,13 +1,37 @@
-
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Mail, HeartPulse, Gift, HandHeart, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useLocation } from "react-router-dom";
+
+
+
 
 const Confirmation = () => {
+  const [headline, setHeadline] = useState("");
+  const [paragrafo, setParagrafo] = useState("");
+
+  const location = useLocation();
+  const state = location.state as { nome?: string; genero?: string } | null;
+
+  const nomeCompleto = state?.nome || "irmã";
+  const genero = state?.genero || ""; // ✅ agora declarado corretamente
+
+  const primeiroNome = nomeCompleto.split(" ")[0];
+  const firstName = primeiroNome.charAt(0).toUpperCase() + primeiroNome.slice(1).toLowerCase();
+  const saudacao = `Olá, ${firstName}`;
+  const prontx = genero === "feminino" ? "pronta" : "pronto";
+
+  useEffect(() => {
+    const h = localStorage.getItem("headline");
+    const p = localStorage.getItem("paragrafo");
+    if (h) setHeadline(h);
+    if (p) setParagrafo(p);
+  }, []);
 
   return (
+
     <div className="min-h-screen bg-white text-gray-800 font-sans">
       {/* Header */}
       <header className="sticky top-0 bg-white/90 backdrop-blur-sm shadow-sm z-50">
@@ -44,18 +68,24 @@ const Confirmation = () => {
           <HeartPulse className="text-[#5f9ea0]" size={40} />
         </div>
         
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold mb-6 text-[#333333]">
-          Your Prayer Request Has Been Received for the Sacred Grotto of Lourdes
-        </h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold mb-4 text-[#333333]">
+      {headline || "📿 Falta apenas um passo para sua oração chegar à Gruta de Lourdes"}
+    </h2>
         </div>
       </section>
       
       {/* Personal Greeting Section */}
-      <section className="py-16 px-2 sm:px-4 bg-white">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
-        <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-[#5f9ea0]">
-          Dear Brother/Sister in Christ,
-        </h3>
+        <section className="py-16 px-2 sm:px-4 bg-white">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
+           <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-[#5f9ea0]">
+  {saudacao}
+</h3>
+
+            {paragrafo && (
+              <p className="text-lg mb-6 leading-relaxed">
+                {paragrafo}
+              </p>
+            )}
         
         <div className="flex flex-col gap-8">
           <div>
