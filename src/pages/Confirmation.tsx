@@ -1,34 +1,27 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Mail, HeartPulse, Gift, HandHeart, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-
-
-
 
 const Confirmation = () => {
   const [headline, setHeadline] = useState("");
-  const [paragraph, setparagraph] = useState("");
+  const [paragraph, setParagraph] = useState("");
 
   const location = useLocation();
   const state = location.state as { nome?: string; genero?: string } | null;
 
-  const nomeCompleto = state?.nome || "Sister";
-  const genero = state?.genero || ""; // ✅ agora declarado corretamente
-
-  const primeiroNome = nomeCompleto.split(" ")[0];
+  const nome = state?.nome || "Friend";
+  const primeiroNome = nome.split(" ")[0];
   const firstName = primeiroNome.charAt(0).toUpperCase() + primeiroNome.slice(1).toLowerCase();
   const saudacao = `Dear ${firstName},`;
-
-  const prontx = genero === "feminino" ? "pronta" : "pronto";
 
   useEffect(() => {
     const h = localStorage.getItem("headline");
     const p = localStorage.getItem("paragraph");
     if (h) setHeadline(h);
-    if (p) setparagraph(p);
+    if (p) setParagraph(p);
   }, []);
 
   return (
@@ -79,7 +72,7 @@ const Confirmation = () => {
         <section className="py-16 px-2 sm:px-4 bg-white">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-screen-lg max-w-4xl">
         <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-[#5f9ea0]">
-          {saudacao} {firstName},
+          {saudacao}
         </h3>
 
             {paragraph && (
