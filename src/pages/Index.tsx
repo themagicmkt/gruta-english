@@ -26,6 +26,18 @@ const Index = () => {
 
   try {
 
+
+    // Envia o lead para a ActiveCampaign
+    await fetch("https://api-email-delta.vercel.app/api/activecampaign", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: data.name,
+        email: data.email,
+        prayer: data.prayer
+      })
+    });
+
     // Gera headline e parágrafo
     const gptRes = await fetch("https://api-sellpage-eng.vercel.app/api/generate", {
       method: "POST",
