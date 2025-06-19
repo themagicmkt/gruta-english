@@ -28,7 +28,7 @@ const Index = () => {
 
 
     // Envia o lead para a ActiveCampaign
-    await fetch("https://api-email-delta.vercel.app/api/activecampaign", {
+    await fetch("https://api-email-english.vercel.app/api/email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
