@@ -251,7 +251,7 @@ const Confirmation = () => {
             </p>
             
             <Button className="w-full bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all" asChild>
-            <a href="https://pay.hotmart.com/N99775963C?off=onbwlmt3" target="_blank" rel="noopener noreferrer">
+            <a href="https://pay.hotmart.com/N99775963C?off=onbwlmt3&checkoutMode=10" target="_blank" rel="noopener noreferrer">
               Include my prayer
             </a>
             </Button>
@@ -280,7 +280,7 @@ const Confirmation = () => {
             </p>
             
             <Button className="w-full bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all" asChild>
-            <a href="https://pay.hotmart.com/N99775963C?off=ndjrlph8" target="_blank" rel="noopener noreferrer">
+            <a href="https://pay.hotmart.com/N99775963C?off=ndjrlph8&checkoutMode=10" target="_blank" rel="noopener noreferrer">
               Complete Prayer Delivery
             </a>
             </Button>
@@ -306,7 +306,7 @@ const Confirmation = () => {
             </p>
             
             <Button className="w-full bg-[#f4d58d] hover:bg-[#e3c47c] text-[#333333] px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all" asChild>
-            <a href="https://pay.hotmart.com/N99775963C?off=x6e1wxo5" target="_blank" rel="noopener noreferrer">
+            <a href="https://pay.hotmart.com/N99775963C?off=x6e1wxo5&checkoutMode=10" target="_blank" rel="noopener noreferrer">
               Send and Help
             </a>
             </Button>
