@@ -63,7 +63,7 @@ const Confirmation = () => {
         </div>
         
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold mb-4 text-[#333333]">
-      {headline || "📿 Falta apenas um passo para sua oração chegar à Gruta de Lourdes"}
+      {headline || "📿 Just one more step for your prayer to reach the Grotto of Lourdes"}
     </h2>
         </div>
       </section>
