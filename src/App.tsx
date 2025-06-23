@@ -22,7 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/saving" element={<LoadingPage />} />
           <Route path="/confirmation" element={<Confirmation />} />
-          <Route path="/MonthlyPlan" element={<MonthlyPlan />} />
+          <Route path="/Monthly-Plan" element={<MonthlyPlan />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
