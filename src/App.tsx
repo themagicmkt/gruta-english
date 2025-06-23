@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Confirmation from "./pages/Confirmation";
 import LoadingPage from "./pages/LoadingPage";
+import UpsellPage from "./pages/UpsellPage";
 
 const queryClient = new QueryClient();
 
@@ -21,7 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/saving" element={<LoadingPage />} />
           <Route path="/confirmation" element={<Confirmation />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/upsell" element={<UpsellPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
