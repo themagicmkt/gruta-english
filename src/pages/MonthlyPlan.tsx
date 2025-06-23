@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-const UpsellPage = () => {
+const MonthlyPlan = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -91,4 +91,4 @@ const UpsellPage = () => {
     );
 };
 
-export default UpsellPage;
+export default MonthlyPlan;
