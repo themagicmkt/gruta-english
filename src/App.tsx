@@ -8,6 +8,8 @@ import NotFound from "./pages/NotFound";
 import Confirmation from "./pages/Confirmation";
 import LoadingPage from "./pages/LoadingPage";
 import MonthlyPlan from "./pages/MonthlyPlan";
+import MonthlyPrayPlan from "./pages/MonthlyPrayPlan";
+
 
 
 
@@ -25,6 +27,8 @@ const App = () => (
           <Route path="/saving" element={<LoadingPage />} />
           <Route path="/confirmation" element={<Confirmation />} />
           <Route path="/Monthly-Plan" element={<MonthlyPlan />} />
+          <Route path="/Monthly-Pray-Plan" element={<MonthlyPrayPlan />} />
+          {/* Add other routes here as needed */}
           
           <Route path="*" element={<NotFound />} />
         </Routes>
