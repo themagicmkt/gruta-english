@@ -7,10 +7,6 @@ const MonthlyPlan = () => {
     const fakeButtonRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        const timer = setTimeout(() => {
-            document.getElementById('hotmart-sales-funnel')?.scrollIntoView({ behavior: 'smooth' });
-        }, 15000);
-
         const script = document.createElement('script');
         script.src = 'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js';
         script.onload = () => {
@@ -19,43 +15,39 @@ const MonthlyPlan = () => {
             }
         };
         document.body.appendChild(script);
-
-        return () => clearTimeout(timer);
     }, []);
 
     useEffect(() => {
         const updateButtonPosition = () => {
-            const realButton = document.querySelector('#hotmart-sales-funnel button');
+            const realButton = document.querySelector('button.default-buy-button') as HTMLElement;
 
             if (realButton && fakeButtonRef.current) {
                 const rect = realButton.getBoundingClientRect();
                 const scrollTop = window.scrollY || document.documentElement.scrollTop;
+                const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
 
                 fakeButtonRef.current.style.top = `${rect.top + scrollTop}px`;
-                fakeButtonRef.current.style.left = `${rect.left}px`;
+                fakeButtonRef.current.style.left = `${rect.left + scrollLeft}px`;
                 fakeButtonRef.current.style.width = `${rect.width}px`;
                 fakeButtonRef.current.style.height = `${rect.height}px`;
-                fakeButtonRef.current.style.zIndex = '999';
+                fakeButtonRef.current.style.display = 'flex';
             }
         };
 
-        const mutationObserver = new MutationObserver(() => {
-            setTimeout(updateButtonPosition, 300);
+        const observer = new MutationObserver(() => {
+            updateButtonPosition();
         });
 
-        const funnel = document.getElementById('hotmart-sales-funnel');
-        if (funnel) {
-            mutationObserver.observe(funnel, {
-                childList: true,
-                subtree: true,
-            });
+        const salesFunnel = document.getElementById('hotmart-sales-funnel');
+        if (salesFunnel) {
+            observer.observe(salesFunnel, { childList: true, subtree: true });
         }
 
         window.addEventListener('resize', updateButtonPosition);
         window.addEventListener('scroll', updateButtonPosition);
 
         return () => {
-            mutationObserver.disconnect();
+            observer.disconnect();
             window.removeEventListener('resize', updateButtonPosition);
             window.removeEventListener('scroll', updateButtonPosition);
         };
@@ -69,7 +61,6 @@ const MonthlyPlan = () => {
         <>
             <div className="min-h-screen bg-white text-gray-800 flex flex-col items-center px-4 py-10 relative">
                 <div className="w-full max-w-4xl space-y-8">
-
                     <h1 className="text-4xl font-extrabold text-center text-pink-700">
                         🙏 Your prayer has been accepted!
                     </h1>
@@ -79,7 +70,6 @@ const MonthlyPlan = () => {
                     <p className="text-center text-lg text-pink-700 font-semibold">
                         Please read carefully — we have something special just for you.
                     </p>
-
                     <p className="text-center text-lg text-gray-700">
                         Persisting in prayer <strong>can make all the difference.</strong>
                     </p>
@@ -113,10 +103,8 @@ const MonthlyPlan = () => {
                         <li>✅ A continuous spiritual connection with Lourdes</li>
                     </ul>
 
-                    {/* Widget Hotmart */}
                     <div id="hotmart-sales-funnel" className="my-6 w-full flex justify-center" />
-                    
-                    {/* Decline Option */}
+
                     <div className="flex justify-center">
                         <button
                             onClick={handleUpsellDecline}
@@ -128,21 +116,21 @@ const MonthlyPlan = () => {
                 </div>
             </div>
 
-            {/* Botão fake posicionado dinamicamente */}
+            {/* Botão fake posicionado dinamicamente sobre o botão real */}
             <div
                 ref={fakeButtonRef}
                 style={{
+                    position: 'absolute',
                     backgroundColor: '#e63946',
                     color: '#fff',
                     fontSize: '1.1em',
                     fontWeight: 'bold',
                     borderRadius: '6px',
-                    display: 'flex',
+                    display: 'none',
                     alignItems: 'center',
                     justifyContent: 'center',
                     pointerEvents: 'none',
-                    position: 'absolute',
-                    opacity: 1,
+                    zIndex: 9999,
                     boxShadow: '0 2px 5px rgba(0, 0, 0, 0.2)',
                 }}
             >
