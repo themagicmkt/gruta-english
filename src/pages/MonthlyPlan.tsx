@@ -120,7 +120,7 @@ const MonthlyPlan = () => {
             onClick={handleUpsellDecline}
             className="text-sm text-gray-500 hover:text-gray-700 underline"
           >
-            No thanks, I want to continue without the monthly prayer
+            
           </button>
         </div>
       </div>
