@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const MonthlyPlan = () => {
     const navigate = useNavigate();
-    const location = useLocation();
     const fakeButtonRef = useRef<HTMLDivElement>(null);
+    const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
+    // Injeta o script da Hotmart
     useEffect(() => {
         const script = document.createElement('script');
         script.src = 'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js';
@@ -17,8 +18,9 @@ const MonthlyPlan = () => {
         document.body.appendChild(script);
     }, []);
 
+    // Verifica o botão da hotmart e posiciona o botão fake
     useEffect(() => {
-        const updateButtonPosition = () => {
+        const tryAttachFakeButton = () => {
             const realButton = document.querySelector('button.default-buy-button') as HTMLElement;
 
             if (realButton && fakeButtonRef.current) {
@@ -31,25 +33,28 @@ const MonthlyPlan = () => {
                 fakeButtonRef.current.style.width = `${rect.width}px`;
                 fakeButtonRef.current.style.height = `${rect.height}px`;
                 fakeButtonRef.current.style.display = 'flex';
+
+                // Parar de verificar após encontrar
+                if (intervalRef.current) clearInterval(intervalRef.current);
             }
         };
 
-        const observer = new MutationObserver(() => {
-            updateButtonPosition();
-        });
+        // Tenta verificar a cada 500ms até encontrar ou até 15s
+        intervalRef.current = setInterval(tryAttachFakeButton, 500);
 
-        const salesFunnel = document.getElementById('hotmart-sales-funnel');
-        if (salesFunnel) {
-            observer.observe(salesFunnel, { childList: true, subtree: true });
-        }
+        // Stop after 15s to avoid infinite loop
+        const timeout = setTimeout(() => {
+            if (intervalRef.current) clearInterval(intervalRef.current);
+        }, 15000);
 
-        window.addEventListener('resize', updateButtonPosition);
-        window.addEventListener('scroll', updateButtonPosition);
+        window.addEventListener('resize', tryAttachFakeButton);
+        window.addEventListener('scroll', tryAttachFakeButton);
 
         return () => {
-            observer.disconnect();
-            window.removeEventListener('resize', updateButtonPosition);
-            window.removeEventListener('scroll', updateButtonPosition);
+            if (intervalRef.current) clearInterval(intervalRef.current);
+            clearTimeout(timeout);
+            window.removeEventListener('resize', tryAttachFakeButton);
+            window.removeEventListener('scroll', tryAttachFakeButton);
         };
     }, []);
 
@@ -116,7 +121,7 @@ const MonthlyPlan = () => {
                 </div>
             </div>
 
-            {/* Botão fake posicionado dinamicamente sobre o botão real */}
+            {/* Botão fake posicionado dinamicamente */}
             <div
                 ref={fakeButtonRef}
                 style={{
