@@ -144,15 +144,6 @@
 }
 
 /* Mobile fix */
-@media (max-width: 480px) {
-  .hotmart-overlay-button {
-    top: calc(100px + 5vw);
-    width: 80vw;
-    font-size: 1em;
-    height: 42px;
-  }
-}
-
 @media (max-width: 768px) {
   .hotmart-overlay-button {
     top: 125px !important;
@@ -160,3 +151,14 @@
     font-size: 1em !important;
   }
 }
+
+/* MOBILE DEVE VIR DEPOIS */
+@media (max-width: 480px) {
+  .hotmart-overlay-button {
+    top: calc(100px + 5vw) !important;
+    width: 80vw !important;
+    font-size: 1em !important;
+    height: 42px !important;
+  }
+}
+
