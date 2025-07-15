@@ -97,7 +97,7 @@ const MonthlyPlan = () => {
               transform: 'translateX(-50%)',
               width: '260px',
               height: '45px',
-              backgroundColor: '#e63946',
+              backgroundColor: '#13ee81ff',
               color: '#fff',
               fontSize: '1.1em',
               fontWeight: 'bold',
@@ -110,7 +110,7 @@ const MonthlyPlan = () => {
               boxShadow: '0 2px 5px rgba(0, 0, 0, 0.2)',
             }}
           >
-            Accept Offer
+            I want to receive a miracle every month
           </div>
         </div>
 
