@@ -110,7 +110,7 @@ const MonthlyPlan = () => {
               boxShadow: '0 2px 5px rgba(0, 0, 0, 0.2)',
             }}
           >
-            I want to receive a miracle<br />every month
+            I want to receive a miracle every month
           </div>
         </div>
 
