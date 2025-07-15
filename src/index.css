@@ -123,14 +123,6 @@
   }
 }
 
-@media (max-width: 768px) {
-  .hotmart-overlay-button {
-    top: 125px !important;
-    width: 230px !important;
-    font-size: 1em !important;
-  }
-}
-
 .hotmart-overlay-button {
   position: absolute;
   top: 137px;
@@ -161,4 +153,10 @@
   }
 }
 
-
+@media (max-width: 768px) {
+  .hotmart-overlay-button {
+    top: 125px !important;
+    width: 230px !important;
+    font-size: 1em !important;
+  }
+}
