@@ -155,10 +155,15 @@
 /* MOBILE DEVE VIR DEPOIS */
 @media (max-width: 480px) {
   .hotmart-overlay-button {
-    top: calc(100px + 5vw) !important;
-    width: 80vw !important;
+    top: calc(195px + 5vw) !important;
+    width: 60vw !important;
     font-size: 1em !important;
     height: 42px !important;
   }
+}
+
+#hotmart-sales-funnel {
+  opacity: 0;
+  pointer-events: all;
 }
 
