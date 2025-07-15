@@ -79,7 +79,7 @@ const MonthlyPlan = () => {
                     <div
                         style={{
                             position: 'absolute',
-                            top: '50%',
+                            top: '47%',
                             left: '50%',
                             transform: 'translate(-50%, -50%)',
                             width: '250px',
@@ -100,18 +100,19 @@ const MonthlyPlan = () => {
                         Aceitar Oferta
                     </div>
 
-                    {/* Widget Hotmart */}
+                    {/* Widget Hotmart invisível */}
                     <div
                         id="hotmart-sales-funnel"
                         className="w-full"
                         style={{
+                            opacity: 0,
+                            pointerEvents: 'auto',
                             zIndex: 1,
                             height: '100%',
                         }}
                     ></div>
                 </div>
 
-                {/* Decline Option */}
                 <div className="flex justify-center">
                     <button
                         onClick={handleUpsellDecline}
