@@ -122,3 +122,19 @@
     background-color: #ebf5f6;
   }
 }
+
+@media (max-width: 768px) {
+  .hotmart-overlay-button {
+    top: 120px !important;
+    width: 230px !important;
+    font-size: 1em !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hotmart-overlay-button {
+    top: 105px !important;
+    width: 200px !important;
+    font-size: 0.95em !important;
+  }
+}
