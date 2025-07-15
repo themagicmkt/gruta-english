@@ -10,7 +10,6 @@ const MonthlyPlan = () => {
             document.getElementById('hotmart-sales-funnel')?.scrollIntoView({ behavior: 'smooth' });
         }, 15000);
 
-        // Carrega o script da Hotmart
         const script = document.createElement('script');
         script.src = 'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js';
         script.onload = () => {
@@ -31,7 +30,6 @@ const MonthlyPlan = () => {
         <div className="min-h-screen bg-white text-gray-800 flex flex-col items-center px-4 py-10">
             <div className="w-full max-w-4xl space-y-8">
 
-                {/* Confirmation Message */}
                 <h1 className="text-4xl font-extrabold text-center text-pink-700">
                     🙏 Your prayer has been accepted!
                 </h1>
@@ -42,7 +40,6 @@ const MonthlyPlan = () => {
                     Please read carefully — we have something special just for you.
                 </p>
 
-                {/* Upsell Introduction */}
                 <p className="text-center text-lg text-gray-700">
                     Persisting in prayer <strong>can make all the difference.</strong>
                 </p>
@@ -50,7 +47,6 @@ const MonthlyPlan = () => {
                     Many believers pray and give thanks every month because they know that by staying connected in faith, <strong>the chances of receiving the awaited miracle increase.</strong>
                 </p>
 
-                {/* Highlight Section */}
                 <div className="bg-pink-50 border border-pink-200 rounded-lg p-6 shadow-md space-y-4">
                     <h2 className="text-2xl font-bold text-pink-700 text-center">
                         🌹 Monthly Prayer Plan — Your prayer delivered every month to the Grotto
@@ -63,7 +59,6 @@ const MonthlyPlan = () => {
                     </p>
                 </div>
 
-                {/* Image */}
                 <div className="flex justify-center my-4">
                     <img
                         src="/voluntarios.jpg"
@@ -72,15 +67,49 @@ const MonthlyPlan = () => {
                     />
                 </div>
 
-                {/* Benefits */}
                 <ul className="space-y-2 text-gray-800">
                     <li>✅ Monthly prayer for your personal intentions</li>
                     <li>✅ Easy submission of new prayer requests</li>
                     <li>✅ A continuous spiritual connection with Lourdes</li>
                 </ul>
 
-                {/* Hotmart Sales Funnel Widget */}
-                <div id="hotmart-sales-funnel" className="my-6 w-full flex justify-center" />
+                {/* HOTMART + BOTÃO FAKE */}
+                <div className="relative my-6 w-full flex justify-center" style={{ minHeight: '280px' }}>
+                    {/* Botão fake */}
+                    <div
+                        style={{
+                            position: 'absolute',
+                            top: '50%',
+                            left: '50%',
+                            transform: 'translate(-50%, -50%)',
+                            width: '250px',
+                            height: '48px',
+                            backgroundColor: '#e63946',
+                            color: '#fff',
+                            fontSize: '1.1em',
+                            fontWeight: 'bold',
+                            borderRadius: '6px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            pointerEvents: 'none',
+                            zIndex: 2,
+                            boxShadow: '0 2px 5px rgba(0, 0, 0, 0.2)',
+                        }}
+                    >
+                        Aceitar Oferta
+                    </div>
+
+                    {/* Widget Hotmart */}
+                    <div
+                        id="hotmart-sales-funnel"
+                        className="w-full"
+                        style={{
+                            zIndex: 1,
+                            height: '100%',
+                        }}
+                    ></div>
+                </div>
 
                 {/* Decline Option */}
                 <div className="flex justify-center">
@@ -88,7 +117,7 @@ const MonthlyPlan = () => {
                         onClick={handleUpsellDecline}
                         className="text-sm text-gray-500 hover:text-gray-700 underline"
                     >
-                        
+                        No thanks, I want to continue without the monthly prayer
                     </button>
                 </div>
             </div>
