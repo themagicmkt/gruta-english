@@ -1,0 +1,209 @@
+body.background {
+  background-color: #fdf0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 80px;
+  overflow-x: hidden;
+}
+
+.background-clouds {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -2;
+  opacity: 0.3;
+}
+
+.main-box {
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 800px;
+  padding: 40px 30px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+  border-radius: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.dove {
+  position: absolute;
+  top: -65px;
+  right: -20px;
+  width: 140px;
+  height: auto;
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+  z-index: 3;
+}
+
+.alert {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #c00;
+}
+
+.red-banner {
+  background-color: #d60000;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.title {
+  text-align: center;
+  color: #003399;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.progress-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.progress-bar {
+  width: 80%;
+  max-width: 600px;
+}
+
+.green-box {
+  background-color: #c4f0c4;
+  color: #1d4705;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  margin: 30px 0;
+  border-radius: 6px;
+}
+
+.blue-banner {
+  background-color: #0050c8;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+  margin: 30px 0 20px;
+}
+
+ul {
+  margin-top: 10px;
+  padding-left: 25px;
+  font-size: 16px;
+}
+
+blockquote {
+  background: #f0f0f0;
+  padding: 10px 15px;
+  border-left: 5px solid #ccc;
+  margin: 20px 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.cta-button {
+  margin-top: 20px;
+  max-width: 350px;
+  width: 100%;
+}
+
+.attention {
+  text-align: center;
+  color: #cc0000;
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.faith-text {
+  text-align: center;
+  font-weight: bold;
+  color: #aa0000;
+}
+
+.cta-wrapper {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.hotmart-widget-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+  min-height: 320px;
+}
+
+.hotmart-funnel-container {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  opacity: 0.05; /* invisível mas ainda clicável */
+  pointer-events: auto;
+}
+
+.hotmart-overlay-button {
+  position: absolute;
+  top: 137px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  max-width: 90vw;
+  background: linear-gradient(90deg, #059669, #047857); /* Verde escuro */
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.2;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  .hotmart-overlay-button {
+    top: 185px !important;
+    width: 230px !important;
+    font-size: 1em !important;
+  }
+}
+
+/* MOBILE DEVE VIR DEPOIS */
+@media (max-width: 480px) {
+  .hotmart-overlay-button {
+    top: calc(165px + 5vw) !important;
+    width: 60vw !important;
+    font-size: 1em !important;
+    height: 42px !important;
+  }
+}
+
+#hotmart-sales-funnel {
+  opacity: 0;
+  pointer-events: all;
+}
+
