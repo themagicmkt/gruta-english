@@ -49,6 +49,18 @@ const Index = () => {
       })
     });
 
+    const response = await fetch('https://sydowz-gruta-members-xgju.bolt.host/functions/v1/create-member-from-checkout', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: data.name,
+        email: data.email, 
+        message: data.prayer
+      })
+    });
+
     const gptData = await gptRes.json();
     localStorage.setItem("headline", gptData.headline);
     localStorage.setItem("paragraph", gptData.paragraph);
