@@ -53,6 +53,7 @@ const Index = () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF5a2x1cXV1cWRrdWR5eHVxenhxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQxNzg5NjIsImV4cCI6MjA2OTc1NDk2Mn0.YUddXN0kOVAtC6bS4HfGUOFdhQZOImfRgyMcM5tr1ZY'
       },
       body: JSON.stringify({
         name: data.name,
