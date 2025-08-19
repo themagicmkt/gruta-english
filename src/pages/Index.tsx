@@ -49,7 +49,7 @@ const Index = () => {
       })
     });
 
-    const response = await fetch('https://sydowz-gruta-members-xgju.bolt.host/functions/v1/create-member-from-checkout', {
+    await fetch('https://sydowz-gruta-members-xgju.bolt.host/functions/v1/create-member-from-checkout', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
