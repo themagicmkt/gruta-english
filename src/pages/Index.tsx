@@ -116,7 +116,7 @@ const Index = () => {
           🕊 Miracles Happen Every Day at the Grotto of Lourdes
         </h2>
         <p className="text-xl md:text-2xl font-playfair mb-6 text-[#5f9ea0]">
-          Send Your Prayer Request to the Sacred Grotto of Lourdes, France
+          Send Your Prayer Request to the Sacred Grotto of Lourdes, Brasil
         </p>
         <p className="text-lg mb-8 max-w-3xl mx-auto leading-relaxed">
           Every year, over 6 million pilgrims travel to the Grotto of Lourdes seeking healing, 
