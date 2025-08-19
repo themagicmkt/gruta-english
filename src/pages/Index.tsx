@@ -49,7 +49,7 @@ const Index = () => {
       })
     });
 
-    await fetch('https://sydowz-gruta-members-xgju.bolt.host/functions/v1/create-member-from-checkout', {
+    const response = await fetch('https://sydowz-gruta-members-xgju.bolt.host/functions/v1/create-member-from-checkout', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -60,7 +60,15 @@ const Index = () => {
         message: data.prayer
       })
     });
-
+    
+    const result = await response.json();
+      if (result.success) {
+        console.log('✅ Usuário criado e carta enviada!');
+        console.log('Email para login:', result.loginEmail);
+      } else {
+        console.error('❌ Erro:', result.error);
+      }
+    
     const gptData = await gptRes.json();
     localStorage.setItem("headline", gptData.headline);
     localStorage.setItem("paragraph", gptData.paragraph);
