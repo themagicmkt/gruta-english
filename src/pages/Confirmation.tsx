@@ -18,7 +18,7 @@ type Plan = {
 };
 
 const PLANS: Plan[] = [
-  { id: "p1", name: "I Need a Little Support",        priceLabel: "$9",  productId: "PRODUCT_ID_9",  color: "default" },
+  { id: "p1", name: "I Need a Little Support",        priceLabel: "$9",  productId: "624608",  color: "default" },
   { id: "p2", name: "Actual Delivery Cost",           priceLabel: "$19", productId: "PRODUCT_ID_19", color: "teal", highlight: true, plan: "0" },
   { id: "p3", name: "Send and Help Another Devotee",  priceLabel: "$35", productId: "PRODUCT_ID_35", color: "gold" },
 ];
