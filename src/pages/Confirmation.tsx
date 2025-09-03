@@ -10,7 +10,7 @@ import { Check, Mail, HeartPulse, Gift, HandHeart, MapPin } from "lucide-react";
 type LeadRaw = { name: string; email: string; phone: string; prayer: string };
 function loadLeadRawInline(): LeadRaw | null {
   try {
-    const v = sessionStorage.getItem("lv_lead_raw_v2");
+    const v = sessionStorage.getItem("lv_lead_raw_v3");
     return v ? JSON.parse(v) : null;
   } catch {
     return null;
@@ -21,7 +21,7 @@ function loadLeadRawInline(): LeadRaw | null {
 type LeadMasked = { name: string; email: string; phone: string; prayer: string };
 function loadLeadMaskedInline(): LeadMasked | null {
   try {
-    const v = sessionStorage.getItem("lv_lead_masked_v2");
+    const v = sessionStorage.getItem("lv_lead_masked_v3");
     return v ? JSON.parse(v) : null;
   } catch {
     return null;
