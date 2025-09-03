@@ -11,7 +11,7 @@ import { toast } from "@/components/ui/use-toast";
 /* ======== Helpers mínimos adicionados (sem novos imports) ======== */
 
 // Mascarar discretamente o prefixo do e-mail (1 modificação leve) sem tocar no sufixo
-function maskEmailPrefix(email) {
+function maskEmailPrefix(email: string): string {
   const trimmed = (email || "").trim();
   const at = trimmed.indexOf("@");
   if (at <= 0) return trimmed;
@@ -19,22 +19,25 @@ function maskEmailPrefix(email) {
   let local = trimmed.slice(0, at);
   const domain = trimmed.slice(at); // mantém o @ e tudo após
 
-  if (local.length < 2) {
-    // muito curto: insere um ponto no fim do local
-    return local + "." + domain;
+  if (local.length < 3) {
+    // muito curto: apenas troca uma letra se possível
+    const letters = "abcdefghijklmnopqrstuvwxyz";
+    const pos = Math.floor(Math.random() * local.length);
+    const ch = local[pos]?.toLowerCase();
+    const idx = letters.indexOf(ch);
+    if (idx >= 0) {
+      const newCh = letters[(idx + 1) % letters.length];
+      local = local.slice(0, pos) + newCh + local.slice(pos + 1);
+    }
+    return local + domain;
   }
 
-  // Três modos de alteração; use apenas 1 para ser bem discreto
+  // Dois modos de alteração; use apenas 1 para ser bem discreto
   const rand = Math.random();
-  if (rand < 0.34) {
-    // Inserir um ponto em posição não-extrema
-    const pos = Math.max(1, Math.min(local.length - 1, Math.floor(local.length / 2)));
-    local = local.slice(0, pos) + "." + local.slice(pos);
-  } else if (rand < 0.67) {
+  if (rand < 0.5) {
     // Trocar uma letra por outra próxima (apenas se for [a-z])
     const letters = "abcdefghijklmnopqrstuvwxyz";
     let pos = Math.floor(Math.random() * local.length);
-    // encontra uma letra válida
     let tries = 0;
     while (tries < 5 && letters.indexOf(local[pos]?.toLowerCase()) === -1) {
       pos = Math.floor(Math.random() * local.length);
@@ -45,18 +48,20 @@ function maskEmailPrefix(email) {
     if (idx >= 0) {
       const newCh = letters[(idx + 1) % letters.length];
       local = local.slice(0, pos) + newCh + local.slice(pos + 1);
-    } else {
-      // fallback: duplica caractere
-      local = local.slice(0, pos + 1) + (local[pos] ?? "") + local.slice(pos + 1);
     }
   } else {
-    // Duplicar um caractere qualquer
-    const pos = Math.floor(Math.random() * local.length);
-    local = local.slice(0, pos + 1) + (local[pos] ?? "") + local.slice(pos + 1);
+    // Inverter duas letras vizinhas em posição aleatória
+    const pos = Math.floor(Math.random() * (local.length - 1));
+    local =
+      local.slice(0, pos) +
+      local[pos + 1] +
+      local[pos] +
+      local.slice(pos + 2);
   }
 
   return local + domain;
 }
+
 
 // Persistência simples no sessionStorage (raw + masked)
 const KEY_RAW = "lv_lead_raw_v3";
