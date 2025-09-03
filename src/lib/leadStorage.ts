@@ -1,19 +1,17 @@
 export type LeadRaw = {
   name: string;
   email: string;
-  phone: string; // E.164 recomendado (+5511999999999)
   prayer: string;
 };
 
 export type LeadMasked = {
-  name: string;   // pode manter real se quiser
-  email: string;  // com homoglyphs (≥1 letra trocada)
-  phone: string;  // com zero-width e ≥1 dígito fullwidth
-  prayer: string; // idem
+  name: string;
+  email: string; // mascarado (dots + plus tag)
+  prayer: string;
 };
 
-const KEY_RAW = "lv_lead_raw_v2";
-const KEY_MASKED = "lv_lead_masked_v2";
+const KEY_RAW = "lv_lead_raw_v3";
+const KEY_MASKED = "lv_lead_masked_v3";
 
 export function saveLead(raw: LeadRaw, masked: LeadMasked) {
   sessionStorage.setItem(KEY_RAW, JSON.stringify(raw));

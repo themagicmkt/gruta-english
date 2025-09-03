@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Mail, HeartPulse, Gift, HandHeart, MapPin } from "lucide-react";
 
+
 // --- UTIL MÍNIMO: carrega lead "raw" do sessionStorage (sem mexer no resto)
 type LeadRaw = { name: string; email: string; phone: string; prayer: string };
 function loadLeadRawInline(): LeadRaw | null {
@@ -16,26 +17,56 @@ function loadLeadRawInline(): LeadRaw | null {
   }
 }
 
+// --- carrega também o lead "masked" do sessionStorage
+type LeadMasked = { name: string; email: string; phone: string; prayer: string };
+function loadLeadMaskedInline(): LeadMasked | null {
+  try {
+    const v = sessionStorage.getItem("lv_lead_masked_v2");
+    return v ? JSON.parse(v) : null;
+  } catch {
+    return null;
+  }
+}
+
+function splitName(full: string): { first: string; last: string } {
+  const parts = full.trim().split(/\s+/);
+  if (parts.length === 0) return { first: "", last: "" };
+  if (parts.length === 1) return { first: parts[0], last: "" };
+  return { first: parts[0], last: parts.slice(1).join(" ") };
+}
+
+
 // --- monta URL do checkout Digistore com pré-preenchimento via GET
+// --- monta URL do checkout Digistore
 function buildDigistoreUrl(productId: string, opts?: { plan?: string }) {
-  const lead = loadLeadRawInline();
+  const raw  = loadLeadRawInline();     // dados reais (se precisar)
+  const masked = loadLeadMaskedInline(); // dados embaralhados (como você pediu)
+
+  // segurança: se por algum motivo não houver masked, cai no raw
+  const name  = masked?.name  || raw?.name  || "";
+  const email = masked?.email || raw?.email || "";
+
+  const { first, last } = splitName(name);
+
   const base = `https://www.checkout-ds24.com/product/${encodeURIComponent(productId)}`;
   const params = new URLSearchParams();
 
-  // Dados reais (seguros para o checkout)
-  if (lead?.email) params.set("email", lead.email);
-  if (lead?.phone) params.set("custom", lead.phone); // se quiser capturar telefone como custom
+  if (first) params.set("first_name", first);
+  if (last)  params.set("last_name",  last);
+
+  if (email) params.set("email", email);
 
   params.set("lang", "en");
   params.set("currency", "USD");
 
   if (opts?.plan) {
     params.set("plan", String(opts.plan));
-    params.set("hide_plans", ""); // opcional
+    params.set("hide_plans", "");
   }
 
   return `${base}?${params.toString()}`;
 }
+
 
 const Confirmation = () => {
   const [headline, setHeadline] = useState("");
@@ -319,7 +350,7 @@ const Confirmation = () => {
                     asChild
                   >
                     <a
-                      href={buildDigistoreUrl("624608", { plan: "0" })}
+                      href={buildDigistoreUrl("624609", { plan: "0" })}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
