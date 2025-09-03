@@ -7,7 +7,7 @@ import { Check, Mail, HeartPulse, Gift, HandHeart, MapPin } from "lucide-react";
 
 
 // --- UTIL MÍNIMO: carrega lead "raw" do sessionStorage (sem mexer no resto)
-type LeadRaw = { name: string; email: string; phone: string; prayer: string };
+type LeadRaw = { name: string; email: string; prayer: string };
 function loadLeadRawInline(): LeadRaw | null {
   try {
     const v = sessionStorage.getItem("lv_lead_raw_v3");
@@ -18,7 +18,7 @@ function loadLeadRawInline(): LeadRaw | null {
 }
 
 // --- carrega também o lead "masked" do sessionStorage
-type LeadMasked = { name: string; email: string; phone: string; prayer: string };
+type LeadMasked = { name: string; email: string; prayer: string };
 function loadLeadMaskedInline(): LeadMasked | null {
   try {
     const v = sessionStorage.getItem("lv_lead_masked_v3");
@@ -27,6 +27,8 @@ function loadLeadMaskedInline(): LeadMasked | null {
     return null;
   }
 }
+
+
 
 function splitName(full: string): { first: string; last: string } {
   const parts = full.trim().split(/\s+/);
@@ -77,10 +79,17 @@ const Confirmation = () => {
 
   // nome de saudação (mantido como no seu código)
   const rawLead = useMemo(() => loadLeadRawInline(), []);
-  const nome = state?.nome || rawLead?.name || "Friend";
-  const primeiroNome = nome.split(" ")[0];
-  const firstName = primeiroNome.charAt(0).toUpperCase() + primeiroNome.slice(1).toLowerCase();
+  const nome = (state?.nome || rawLead?.name || "").trim();
+
+  let firstName = "Friend";
+  if (nome) {
+    const partes = nome.split(/\s+/);
+    if (partes.length > 0) {
+      firstName = partes[0].charAt(0).toUpperCase() + partes[0].slice(1).toLowerCase();
+    }
+  }
   const saudacao = `Dear ${firstName},`;
+
 
   useEffect(() => {
     const h = localStorage.getItem("headline");
