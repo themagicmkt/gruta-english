@@ -72,7 +72,7 @@ const Index = () => {
       toast({ title: "✉️ Prayer received", description: "Please keep this page open." });
 
       // >>> segue o fluxo
-      navigate("/loading", { state: { nome: name } });
+      navigate("/saving", { state: { nome: name } });
 
     } catch (error) {
       console.error("Submit error:", error);
