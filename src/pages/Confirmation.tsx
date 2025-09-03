@@ -261,50 +261,46 @@ const Confirmation = () => {
             <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-[#5f9ea0] text-center">
               Send Your Prayer Request Now
             </h3>
-            
+
             <p className="text-lg mb-8 text-center leading-relaxed max-w-3xl mx-auto">
               We know that not everyone has the chance to leave their prayers in one of the most sacred places in the world — especially in difficult financial times. That is why we decided to help others send their prayers and receive the blessings they deserve.
             </p>
-            
+
             <p className="text-lg mb-10 text-center font-semibold max-w-3xl mx-auto">
               As devotees, we never want money to be an obstacle to your sincere prayers.
             </p>
-            
+
             <div className="grid md:grid-cols-3 gap-6">
-              {/* Option 1 → DIGISTORE */}
-              <Card className="border-[#5f9ea0]/30 shadow-md hover:shadow-lg transition-all">
+              {/* Option 1 - GOLD */}
+              <Card className="border-[#f4d58d] shadow-md hover:shadow-lg transition-all">
                 <CardContent className="pt-6 px-4 pb-6">
                   <div className="flex justify-center mb-4">
-                    <Gift className="text-[#5f9ea0]" size={32} />
+                    <Gift className="text-[#f4d58d]" size={32} />
                   </div>
-                  
-                  <h3 className="font-playfair font-semibold text-2xl md:text-3xl mb-2 text-center">$9</h3>
-                  <h4 className="font-sans text-lg mb-4 text-center">I Need a Little Support</h4>
-                  
+                  <h3 className="font-playfair font-semibold text-2xl md:text-3xl mb-2 text-center">$49</h3>
+                  <h4 className="font-sans text-lg mb-4 text-center">Take My Prayer + Support Another Devotee</h4>
                   <p className="text-sm mb-6 text-center italic">
-                    "Please take my prayer to Lourdes. At the moment, I cannot afford the full amount, but I wish to take part in this sacred act."
+                    "I want to contribute a little more to help someone who may not be able to. May my prayer and my donation bring blessings to those in need."
                   </p>
-                  
                   <Button
-                    className="w-full bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
+                    className="w-full bg-[#f4d58d] hover:bg-[#e3c47c] text-[#333333] px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
                     asChild
                   >
                     <a
-                      href={buildDigistoreUrl("PRODUCT_ID_9")}
+                      href={buildDigistoreUrl("624610")}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Include my prayer
+                      Send and Help
                     </a>
                   </Button>
-                  
                   <p className="text-xs mt-3 text-center text-gray-500">
-                    It is an honor to include your prayer.
+                    Thank you for your generosity.
                   </p>
                 </CardContent>
               </Card>
-              
-              {/* Option 2 → DIGISTORE (com plan opcional) */}
+
+              {/* Option 2 - TEAL */}
               <Card className="border-[#5f9ea0] shadow-lg hover:shadow-xl transition-all relative overflow-hidden">
                 <div className="absolute top-0 right-0 bg-[#5f9ea0] text-white text-xs py-1 px-3 rounded-bl-lg">
                   Recommended
@@ -313,67 +309,59 @@ const Confirmation = () => {
                   <div className="flex justify-center mb-4">
                     <HeartPulse className="text-[#5f9ea0]" size={32} />
                   </div>
-                  
-                  <h3 className="font-playfair font-semibold text-2xl md:text-3xl mb-2 text-center">$19</h3>
+                  <h3 className="font-playfair font-semibold text-2xl md:text-3xl mb-2 text-center">$39</h3>
                   <h4 className="font-sans text-lg mb-4 text-center">Actual Delivery Cost</h4>
-                  
                   <p className="text-sm mb-6 text-center italic">
                     "I am covering the full cost to take my prayer to the Grotto. Thank you for making this possible."
                   </p>
-                  
                   <Button
                     className="w-full bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
                     asChild
                   >
                     <a
-                      href={buildDigistoreUrl("PRODUCT_ID_19", { plan: "0" })}
+                      href={buildDigistoreUrl("624608", { plan: "0" })}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       Complete Prayer Delivery
                     </a>
                   </Button>
-                  
                   <p className="text-xs mt-3 text-center text-gray-500">
                     This is the actual cost of the delivery mission.
                   </p>
                 </CardContent>
               </Card>
-              
-              {/* Option 3 → DIGISTORE */}
-              <Card className="border-[#f4d58d] shadow-md hover:shadow-lg transition-all">
+
+              {/* Option 3 - GREEN */}
+              <Card className="border-[#5f9ea0]/30 shadow-md hover:shadow-lg transition-all">
                 <CardContent className="pt-6 px-4 pb-6">
                   <div className="flex justify-center mb-4">
-                    <Gift className="text-[#f4d58d]" size={32} />
+                    <Gift className="text-[#5f9ea0]" size={32} />
                   </div>
-                  
-                  <h3 className="font-playfair font-semibold text-2xl md:text-3xl mb-2 text-center">$35</h3>
-                  <h4 className="font-sans text-lg mb-4 text-center">Take My Prayer + Support Another Devotee</h4>
-                  
+                  <h3 className="font-playfair font-semibold text-2xl md:text-3xl mb-2 text-center">$29</h3>
+                  <h4 className="font-sans text-lg mb-4 text-center">I Need a Little Support</h4>
                   <p className="text-sm mb-6 text-center italic">
-                    "I want to contribute a little more to help someone who may not be able to. May my prayer and my donation bring blessings to those in need."
+                    "Please take my prayer to Lourdes. At the moment, I cannot afford the full amount, but I wish to take part in this sacred act."
                   </p>
-                  
                   <Button
-                    className="w-full bg-[#f4d58d] hover:bg-[#e3c47c] text-[#333333] px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
+                    className="w-full bg-[#5f9ea0] hover:bg-[#4e8a8c] text-white px-4 py-2 rounded-lg text-lg font-medium shadow-md hover:shadow-lg transition-all"
                     asChild
                   >
                     <a
-                      href={buildDigistoreUrl("PRODUCT_ID_35")}
+                      href={buildDigistoreUrl("624608")}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Send and Help
+                      Include my prayer
                     </a>
                   </Button>
-                  
                   <p className="text-xs mt-3 text-center text-gray-500">
-                    Thank you for your generosity.
+                    It is an honor to include your prayer.
                   </p>
                 </CardContent>
               </Card>
             </div>
-            
+
             <div className="mt-10 text-center">
               <p className="text-lg font-playfair italic">
                 "Carry each other's burdens, and in this way you will fulfill the law of Christ."
@@ -382,6 +370,7 @@ const Confirmation = () => {
             </div>
           </div>
         </section>
+
         
         {/* Call to Action */}
         <section className="py-16 md:py-24 px-2 sm:px-4 bg-gradient-to-b from-white to-blue-50">
